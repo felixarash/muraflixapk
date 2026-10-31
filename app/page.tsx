@@ -8,8 +8,7 @@ export default function Home() {
   const swipeStartX = useRef<number | null>(null);
   const swipeEndX = useRef<number | null>(null);
 
-  const androidDownloadUrl =
-    "https://dwwvsq0bzwbxuz8x.public.blob.vercel-storage.com/muraflix.apk";
+  const androidDownloadUrl = "/api/download";
   const coreFeatures = [
     {
       title: "Playback Engine",
@@ -155,9 +154,8 @@ export default function Home() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <a
                 href={androidDownloadUrl}
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-orange-950/40 transition hover:from-orange-400 hover:to-orange-500"
-                target="_blank"
-                rel="noopener noreferrer"
+                download="muraflix.apk"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-orange-950/40 transition hover:from-orange-400 hover:to-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
               >
                 Download APK for Android
               </a>
@@ -356,9 +354,8 @@ export default function Home() {
             <div className="mt-5 flex flex-col gap-3 sm:flex-row">
               <a
                 href={androidDownloadUrl}
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-950/40 transition hover:from-orange-400 hover:to-orange-500"
-                target="_blank"
-                rel="noopener noreferrer"
+                download="muraflix.apk"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-950/40 transition hover:from-orange-400 hover:to-orange-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-300"
               >
                 Download Muraflix APK
               </a>

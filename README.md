@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Private APK downloads
+
+The download button uses the server route at `/api/download`. That route reads
+`app-release.apk` from a private Vercel Blob and never exposes the Blob token or
+signed storage URL to the browser.
+
+Set `BLOB_READ_WRITE_TOKEN` in `.env.local` for local development and in the
+deployment provider's server-side environment variables for production. Do not
+prefix this variable with `NEXT_PUBLIC_` or expose its value in client code.
+
 ## Getting Started
 
 First, run the development server:
